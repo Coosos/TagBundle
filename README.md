@@ -3,6 +3,10 @@
 _TagBundle is a bundle created from the 
 [Grafikart video](https://www.grafikart.fr/tutoriels/symfony/tags-form-type-882)._
 
+## Requirements
+
+* PHP 7.0 and greater
+
 ## Installation
 
 ### Step 1 : Download the bundle
