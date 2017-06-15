@@ -1,0 +1,31 @@
+{
+    "name": "coosos/tag-bundle",
+    "description": "Symfony TagBundle",
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/Coosos",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Remy Lescallier",
+            "email": "lescallier1@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0",
+        "symfony/symfony":  "^3.0",
+        "doctrine/orm":     "^2.5",
+        "phpunit/phpunit":  "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cossos\\TagBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "support": {
+        "docs": "https://github.com/Coosos/TagBundle"
+    }
+}
