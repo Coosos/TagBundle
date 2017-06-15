@@ -14,7 +14,7 @@ _TagBundle is a bundle created from the
 Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle :
 
-    $ Not currently available
+    $ composer require coosos/tag-bundle
     
 This command is used if composer is installed in your system.
 
