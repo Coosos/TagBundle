@@ -1,0 +1,5 @@
+services:
+    coosos.tag_bundle.tags_type:
+        class: Coosos\TagBundle\Form\Type\TagsType
+        arguments: ['@doctrine.orm.entity_manager']
+        tags: [form.type]
