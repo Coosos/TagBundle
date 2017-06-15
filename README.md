@@ -1,11 +1,11 @@
-#Coosos/TagBundle
+# Coosos/TagBundle
 
 _TagBundle is a bundle created from the 
 [Grafikart video](https://www.grafikart.fr/tutoriels/symfony/tags-form-type-882)._
 
-##Installation
+## Installation
 
-###Step 1 : Download the bundle
+### Step 1 : Download the bundle
 
 Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle :
@@ -14,7 +14,7 @@ following command to download the latest stable version of this bundle :
     
 This command is used if composer is installed in your system.
 
-###Step 2: Enable the Bundle
+### Step 2: Enable the Bundle
 
 Then, enable the bundle by adding the following line in the ``app/AppKernel.php``
 file of your project :
@@ -34,7 +34,7 @@ file of your project :
         // ...
     }
 
-###Step 3: Insert tag entity in your database 
+### Step 3: Insert tag entity in your database 
 
 Use this command to insert tag entity in your database
 
