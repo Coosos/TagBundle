@@ -1,0 +1,8 @@
+{{ form_row(formTag) }}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#{{ formTag.vars.id }}").tagEditor({
+            forceLowercase: false
+        });
+    });
+</script>

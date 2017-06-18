@@ -1,5 +1,10 @@
 services:
+
     coosos.tag_bundle.tags_type:
         class: Coosos\TagBundle\Form\Type\TagsType
         arguments: ['@doctrine.orm.entity_manager']
         tags: [form.type]
+
+    coosos.tag_bundle.tag_extension:
+        class: Coosos\TagBundle\Twig\TagExtension
+        tags: [ twig.extension ]
