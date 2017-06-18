@@ -43,3 +43,17 @@ file of your project :
 Use this command to insert tag entity in your database
 
     $ php bin/console doctrine:schema:update -f
+    
+## Usage
+
+### Form type
+
+To create a field for tags, you must use a field type provided by the bundle
+
+    use Coosos\TagBundle\Form\Type\TagsType;
+    ...
+    $builder->add("tags", TagsType::class)
+
+### Twig Extension
+
+Not yet available
