@@ -6,6 +6,7 @@ _TagBundle is a bundle created from the
 ## Requirements
 
 * PHP 7.0 and greater
+* [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) (require for twig extension)
 
 ## Installation
 
@@ -56,4 +57,6 @@ To create a field for tags, you must use a field type provided by the bundle
 
 ### Twig Extension
 
-Not yet available
+Using the twig function, you must have [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) installed
+
+    {{ form_coosos_tag(form.tags) }}
