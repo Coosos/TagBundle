@@ -15,7 +15,7 @@ class TagExtension extends \Twig_Extension
         return [
             new \Twig_SimpleFunction("form_coosos_tag", [$this, 'tagRendering'], [
                 'is_safe' => ['html'],
-                'needs_environment' => true // Tell twig we need the environment
+                'needs_environment' => true,
             ]),
         ];
     }
