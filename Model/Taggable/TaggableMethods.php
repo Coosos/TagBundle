@@ -1,6 +1,6 @@
 <?php
 
-namespace Coosos\Model\Taggable;
+namespace Coosos\TagBundle\Model\Taggable;
 
 use Coosos\TagBundle\Entity\Tag;
 use Doctrine\Common\Collections\ArrayCollection;
