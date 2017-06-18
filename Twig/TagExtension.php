@@ -25,7 +25,7 @@ class TagExtension extends \Twig_Extension
      * @param FormView          $formTag
      * @return string
      */
-    public function tagRendering(\Twig_Environment $environment, FormView $formTag)
+    public function tagRendering(\Twig_Environment $environment, FormView $formTag): string
     {
         return $environment->render("CoososTagBundle::formCoososTag.html.twig", ["formTag" => $formTag]);
     }
