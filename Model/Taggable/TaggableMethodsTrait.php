@@ -5,7 +5,7 @@ namespace Coosos\TagBundle\Model\Taggable;
 use Coosos\TagBundle\Entity\Tag;
 use Doctrine\Common\Collections\ArrayCollection;
 
-trait TaggableMethods
+trait TaggableMethodsTrait
 {
     /**
      * @param Tag $tag
