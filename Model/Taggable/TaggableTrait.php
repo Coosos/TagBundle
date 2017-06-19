@@ -13,7 +13,7 @@ trait TaggableTrait
      *
      * @ORM\ManyToMany(targetEntity="Coosos\TagBundle\Entity\Tag", cascade={"persist"})
      */
-    protected $tags;
+    private $tags;
 
     /**
      * @param Tag $tag

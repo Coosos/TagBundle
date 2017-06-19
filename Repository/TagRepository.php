@@ -12,4 +12,35 @@ use Doctrine\ORM\EntityRepository;
  */
 class TagRepository extends EntityRepository
 {
+    /**
+     * @param null|string $searchTag
+     * @param string      $category
+     * @param int         $maxResult
+     * @return array
+     */
+    public function getTagList($searchTag = null, $category = null, int $maxResult = null)
+    {
+        $query = $this->createQueryBuilder("t");
+
+        $query->select("t");
+
+        if ($category) {
+            $query
+                ->andWhere("t.category = :category")
+                ->setParameter("category", $category);
+        }
+
+        if ($searchTag) {
+            $query
+                ->andWhere("t.name LIKE :tag")
+                ->setParameter("tag", "%" . $searchTag . "%");
+        }
+
+        if ($maxResult) {
+            $query
+                ->setMaxResults($maxResult);
+        }
+
+        return $query->getQuery()->getResult();
+    }
 }

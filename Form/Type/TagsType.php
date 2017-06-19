@@ -8,6 +8,8 @@ use Symfony\Bridge\Doctrine\Form\DataTransformer\CollectionToArrayTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormInterface;
+use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class TagsType extends AbstractType
@@ -27,6 +29,16 @@ class TagsType extends AbstractType
     }
 
     /**
+     * @param FormView      $view
+     * @param FormInterface $form
+     * @param array         $options
+     */
+    public function buildView(FormView $view, FormInterface $form, array $options)
+    {
+        $view->vars = array_merge($view->vars, $options);
+    }
+
+    /**
      * @param FormBuilderInterface $builder
      * @param array                $options
      */
@@ -34,7 +46,7 @@ class TagsType extends AbstractType
     {
         $builder
             ->addModelTransformer(new CollectionToArrayTransformer(), true)
-            ->addModelTransformer(new TagsTransformer($this->manager), true);
+            ->addModelTransformer(new TagsTransformer($this->manager, $options), true);
     }
 
     /**
@@ -44,6 +56,9 @@ class TagsType extends AbstractType
     {
         $resolver->setDefaults([
             "required" => false,
+            "coosos_tag_auto_complete"  => true,
+            "coosos_tag_persist_new"    => true,
+            "coosos_tag_category"       => "default",
         ]);
     }
 
