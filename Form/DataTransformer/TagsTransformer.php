@@ -49,11 +49,13 @@ class TagsTransformer implements DataTransformerInterface
             "name" => $names
         ]);
 
-        $newNames = array_diff($names, $tags);
-        foreach ($newNames as $name) {
-            $tag = new Tag();
-            $tag->setName($name);
-            $tags[] = $tag;
+        if($this->options["coosos_tag_persist_new"]) {
+            $newNames = array_diff($names, $tags);
+            foreach ($newNames as $name) {
+                $tag = new Tag();
+                $tag->setName($name);
+                $tags[] = $tag;
+            }
         }
 
         return $tags;
