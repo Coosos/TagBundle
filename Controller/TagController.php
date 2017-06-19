@@ -26,8 +26,8 @@ class TagController extends Controller
      */
     public function tagListAction(Request $request)
     {
-        $searchTag = ($request->query->has("tag")) ? $request->query->get("tag") : null;
-        $categoryTag = ($request->query->has("category")) ? $request->query->get("category") : null;
+        $searchTag = ($request->query->has("term")) ? $request->query->get("term") : null;
+        $categoryTag = ($request->query->has("category")) ? $request->query->get("category") : "default";
 
         $em = $this->getDoctrine()->getManager();
         /** @var TagRepository $repository */
@@ -40,6 +40,6 @@ class TagController extends Controller
             $tags[] = $result->getName();
         }
 
-        return new JsonResponse(json_encode($tags), 200);
+        return new JsonResponse($tags, 200);
     }
 }
