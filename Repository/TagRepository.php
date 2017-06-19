@@ -18,15 +18,17 @@ class TagRepository extends EntityRepository
      * @param int         $maxResult
      * @return array
      */
-    public function getTagList($searchTag = null, $category = "default", int $maxResult = null)
+    public function getTagList($searchTag = null, $category = null, int $maxResult = null)
     {
         $query = $this->createQueryBuilder("t");
 
         $query->select("t");
 
-        $query
-            ->where("t.category = :category")
-            ->setParameter("category", $category);
+        if ($category) {
+            $query
+                ->andWhere("t.category = :category")
+                ->setParameter("category", $category);
+        }
 
         if ($searchTag) {
             $query
