@@ -46,7 +46,7 @@ class TagsType extends AbstractType
     {
         $builder
             ->addModelTransformer(new CollectionToArrayTransformer(), true)
-            ->addModelTransformer(new TagsTransformer($this->manager), true);
+            ->addModelTransformer(new TagsTransformer($this->manager, $options), true);
     }
 
     /**

@@ -14,12 +14,19 @@ class TagsTransformer implements DataTransformerInterface
     private $manager;
 
     /**
+     * @var array
+     */
+    private $options;
+
+    /**
      * TagsTransformer constructor.
      * @param ObjectManager $manager
+     * @param array         $options
      */
-    public function __construct(ObjectManager $manager)
+    public function __construct(ObjectManager $manager, array $options)
     {
         $this->manager = $manager;
+        $this->options = $options;
     }
 
     /**
