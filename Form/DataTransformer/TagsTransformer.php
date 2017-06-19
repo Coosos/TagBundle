@@ -54,6 +54,7 @@ class TagsTransformer implements DataTransformerInterface
             foreach ($newNames as $name) {
                 $tag = new Tag();
                 $tag->setName($name);
+                $tag->setCategory($this->options["coosos_tag_category"]);
                 $tags[] = $tag;
             }
         }
