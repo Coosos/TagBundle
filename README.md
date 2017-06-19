@@ -10,6 +10,7 @@ _TagBundle is a bundle created from the
 * Symfony 3.0 and greater
 * PHP 7.0 and greater
 * [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) (require for twig extension)
+* [jQuery UI Autocomplete](https://jqueryui.com/autocomplete/) (require for auto completion)
 
 ## Installation
 
