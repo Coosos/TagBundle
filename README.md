@@ -88,13 +88,13 @@ Configuration
             <td>If you want to use auto completion</td>
         </tr>
         <tr>
-            <td>coosos_tag_category</td>
+            <td>coosos_tag_persist_new</td>
             <td>true</td>
             <td>true | false</td>
             <td>If you want the tags not exist is created</td>
         </tr>
         <tr>
-            <td>coosos_tag_type_ref</td>
+            <td>coosos_tag_category</td>
             <td>"default"</td>
             <td>string</td>
             <td>If you want to separate tags in different categories</td>
