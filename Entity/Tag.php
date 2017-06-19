@@ -29,6 +29,13 @@ class Tag
     private $name;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="category", type="string", length=255)
+     */
+    private $category;
+
+    /**
      * Get id
      *
      * @return int
@@ -60,6 +67,22 @@ class Tag
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param string $category
+     */
+    public function setCategory(string $category)
+    {
+        $this->category = $category;
     }
 
     /**
