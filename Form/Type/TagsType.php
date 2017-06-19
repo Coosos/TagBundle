@@ -28,6 +28,11 @@ class TagsType extends AbstractType
         $this->manager = $manager;
     }
 
+    /**
+     * @param FormView      $view
+     * @param FormInterface $form
+     * @param array         $options
+     */
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $view->vars = array_merge($view->vars, $options);
@@ -51,8 +56,9 @@ class TagsType extends AbstractType
     {
         $resolver->setDefaults([
             "required" => false,
-            "coosos_tag_auto_complete" => true,
-            "coosos_tag_persist_new"  => true,
+            "coosos_tag_auto_complete"  => true,
+            "coosos_tag_persist_new"    => true,
+            "coosos_tag_type_ref"       => "default",
         ]);
     }
 
