@@ -5,6 +5,7 @@ _TagBundle is a bundle created from the
 
 ## Requirements
 
+* Symfony 3.0 and greater
 * PHP 7.0 and greater
 * [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) (require for twig extension)
 
