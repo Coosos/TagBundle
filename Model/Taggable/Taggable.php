@@ -2,9 +2,7 @@
 
 namespace Coosos\TagBundle\Model\Taggable;
 
-trait Taggable {
-
-    use TaggableProperties;
-    use TaggableMethods;
-
+trait Taggable
+{
+    use TaggableProperties, TaggableMethods;
 }
