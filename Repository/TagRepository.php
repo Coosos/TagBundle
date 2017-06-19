@@ -14,22 +14,29 @@ class TagRepository extends EntityRepository
 {
     /**
      * @param null|string $searchTag
+     * @param string      $category
      * @param int         $maxResult
      * @return array
      */
-    public function getTagList($searchTag = null, int $maxResult = null)
+    public function getTagList($searchTag = null, $category = "default", int $maxResult = null)
     {
         $query = $this->createQueryBuilder("t");
 
         $query->select("t");
 
+        $query
+            ->where("t.category = :category")
+            ->setParameter("category", $category);
+
         if ($searchTag) {
-            $query->where("t.name LIKE :tag");
-            $query->setParameter("tag", "%" . $searchTag . "%");
+            $query
+                ->andWhere("t.name LIKE :tag")
+                ->setParameter("tag", "%" . $searchTag . "%");
         }
 
         if ($maxResult) {
-            $query->setMaxResults($maxResult);
+            $query
+                ->setMaxResults($maxResult);
         }
 
         return $query->getQuery()->getResult();

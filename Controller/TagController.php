@@ -27,11 +27,12 @@ class TagController extends Controller
     public function tagListAction(Request $request)
     {
         $searchTag = ($request->query->has("tag")) ? $request->query->get("tag") : null;
+        $categoryTag = ($request->query->has("category")) ? $request->query->get("category") : null;
 
         $em = $this->getDoctrine()->getManager();
         /** @var TagRepository $repository */
         $repository = $em->getRepository("CoososTagBundle:Tag");
-        $results = $repository->getTagList($searchTag,  5);
+        $results = $repository->getTagList($searchTag,  $categoryTag, 5);
 
         $tags = [];
         /** @var Tag $result */
