@@ -31,7 +31,7 @@ class Tag
     /**
      * @var string
      *
-     * @ORM\Column(name="category", type="string", length=255)
+     * @ORM\Column(name="category", type="string", length=255, options={"default" : "default"})
      */
     private $category = "default";
 
