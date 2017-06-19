@@ -56,7 +56,51 @@ To create a field for tags, you must use a field type provided by the bundle
 
     use Coosos\TagBundle\Form\Type\TagsType;
     ...
-    $builder->add("tags", TagsType::class)
+    $builder->add("tags", TagsType::class);
+    
+#### Options
+
+Usage
+
+    $builder->add("tags", TagsType::class, [
+        ...,
+        "coosos_tag_auto_complete"  => false,
+        "coosos_tag_persist_new"    => false,
+        "coosos_tag_category"       => "House"
+    ]);
+
+Configuration
+
+<table>
+    <thead>
+        <tr>
+            <th align="left">Config name</th>
+            <th align="left">Default value</th>
+            <th align="left">Values</th>
+            <th align="left">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>coosos_tag_auto_complete</td>
+            <td>true</td>
+            <td>true | false</td>
+            <td>If you want to use auto completion</td>
+        </tr>
+        <tr>
+            <td>coosos_tag_category</td>
+            <td>true</td>
+            <td>true | false</td>
+            <td>If you want the tags not exist is created</td>
+        </tr>
+        <tr>
+            <td>coosos_tag_type_ref</td>
+            <td>"default"</td>
+            <td>string</td>
+            <td>If you want to separate tags in different categories</td>
+        </tr>
+    </tbody>
+</table>
 
 ### Twig Extension
 
