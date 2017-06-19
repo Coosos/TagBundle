@@ -19,8 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cossos\\TagBundle\\"                   : "",
-            "Coossos\\TagBundle\\Model\\Taggable\\" : "Coosos/TagBundle/Model/Taggable"
+            "Cossos\\TagBundle\\" : ""
         },
         "exclude-from-classmap": [
             "/Tests/"
