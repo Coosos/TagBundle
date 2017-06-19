@@ -2,6 +2,8 @@
 
 namespace Coosos\TagBundle\Controller;
 
+use Coosos\TagBundle\Entity\Tag;
+use Coosos\TagBundle\Repository\TagRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -24,6 +26,19 @@ class TagController extends Controller
      */
     public function tagListAction(Request $request)
     {
-        return new JsonResponse([]);
+        $searchTag = ($request->query->has("tag")) ? $request->query->get("tag") : null;
+
+        $em = $this->getDoctrine()->getManager();
+        /** @var TagRepository $repository */
+        $repository = $em->getRepository("CoososTagBundle:Tag");
+        $results = $repository->getTagList($searchTag,  5);
+
+        $tags = [];
+        /** @var Tag $result */
+        foreach ($results as $result) {
+            $tags[] = $result->getName();
+        }
+
+        return new JsonResponse(json_encode($tags), 200);
     }
 }
