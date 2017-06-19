@@ -33,7 +33,7 @@ class Tag
      *
      * @ORM\Column(name="category", type="string", length=255)
      */
-    private $category;
+    private $category = "default";
 
     /**
      * Get id
