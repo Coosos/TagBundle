@@ -2,6 +2,23 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $("#{{ formTag.vars.id }}").tagEditor({
+            {% if formTag.vars.coosos_tag_auto_complete %}
+                autocomplete: {
+                    delay: 0,
+                    position: { collision: 'flip' },
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "{{ path("coosos_tag_tag_tagList") }}",
+                            method: "GET",
+                            data: {term: request.term, category: "{{ formTag.vars.coosos_tag_category }}"},
+                            dataType: "json"
+                        }).done(function (data) {
+                            response(data);
+                        });
+                    }
+                },
+                minLength: 2,
+            {% endif %}
             forceLowercase: false
         });
     });
