@@ -58,7 +58,7 @@ class TagsType extends AbstractType
             "required" => false,
             "coosos_tag_auto_complete"  => true,
             "coosos_tag_persist_new"    => true,
-            "coosos_tag_type_ref"       => "default",
+            "coosos_tag_category"       => "default",
         ]);
     }
 
