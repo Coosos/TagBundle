@@ -100,7 +100,13 @@ class TagsTransformerTest extends TestCase
             ->method("getRepository")
             ->will($this->returnValue($tagRepository));
 
+        $options = [
+            "coosos_tag_auto_complete"  => true,
+            "coosos_tag_persist_new"    => true,
+            "coosos_tag_category"       => "default",
+        ];
+
         /** @noinspection PhpParamsInspection */
-        return new TagsTransformer($entityManager);
+        return new TagsTransformer($entityManager, $options);
     }
 }
