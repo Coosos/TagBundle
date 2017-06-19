@@ -61,15 +61,6 @@ To create a field for tags, you must use a field type provided by the bundle
     
 #### Options
 
-##### Usage
-
-    $builder->add("tags", TagsType::class, [
-        ...,
-        "coosos_tag_auto_complete"  => false,
-        "coosos_tag_persist_new"    => false,
-        "coosos_tag_category"       => "House"
-    ]);
-
 ##### Configuration list
 
 <table>
@@ -102,6 +93,15 @@ To create a field for tags, you must use a field type provided by the bundle
         </tr>
     </tbody>
 </table>
+
+##### Usage
+
+    $builder->add("tags", TagsType::class, [
+        ...,
+        "coosos_tag_auto_complete"  => false,
+        "coosos_tag_persist_new"    => false,
+        "coosos_tag_category"       => "House"
+    ]);
 
 ##### Auto complete
 
