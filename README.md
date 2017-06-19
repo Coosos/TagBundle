@@ -1,5 +1,7 @@
 # Coosos/TagBundle
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/15b5ca2c-ff07-46e0-b258-da8218961e12/mini.png)](https://insight.sensiolabs.com/projects/15b5ca2c-ff07-46e0-b258-da8218961e12)
+
 _TagBundle is a bundle created from the 
 [Grafikart video](https://www.grafikart.fr/tutoriels/symfony/tags-form-type-882)._
 
