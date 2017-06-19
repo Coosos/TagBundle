@@ -53,14 +53,14 @@ Use this command to insert tag entity in your database
 ### Form type
 
 To create a field for tags, you must use a field type provided by the bundle
-
+    
     use Coosos\TagBundle\Form\Type\TagsType;
     ...
     $builder->add("tags", TagsType::class);
     
 #### Options
 
-Usage
+##### Usage
 
     $builder->add("tags", TagsType::class, [
         ...,
@@ -69,7 +69,7 @@ Usage
         "coosos_tag_category"       => "House"
     ]);
 
-Configuration
+##### Configuration list
 
 <table>
     <thead>
@@ -101,6 +101,10 @@ Configuration
         </tr>
     </tbody>
 </table>
+
+##### Auto complete
+
+The auto completion uses the library [jQuery UI Autocomplete](https://jqueryui.com/autocomplete/)
 
 ### Twig Extension
 
