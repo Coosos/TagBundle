@@ -1,0 +1,29 @@
+{% block tags_widget %}
+    {% spaceless %}
+        {{ form_widget(form) }}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#{{ form.vars.id }}").tagEditor({
+                    {% if form.vars.coosos_tag_auto_complete %}
+                    autocomplete: {
+                        delay: 0,
+                        position: { collision: 'flip' },
+                        source: function (request, response) {
+                            $.ajax({
+                                url: "{{ path("coosos_tag_tag_tagList") }}",
+                                method: "GET",
+                                data: {term: request.term, category: "{{ form.vars.coosos_tag_category }}"},
+                                dataType: "json"
+                            }).done(function (data) {
+                                response(data);
+                            });
+                        }
+                    },
+                    minLength: 2,
+                    {% endif %}
+                    forceLowercase: false
+                });
+            });
+        </script>
+    {% endspaceless %}
+{% endblock %}

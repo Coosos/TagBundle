@@ -107,6 +107,15 @@ To create a field for tags, you must use a field type provided by the bundle
 
 The auto completion uses the library [jQuery UI Autocomplete](https://jqueryui.com/autocomplete/)
 
+### TagsType - Form custom template
+
+You must have [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) installed
+
+    twig:
+        form_themes:
+            - "CoososTagBundle:Form:fields.html.twig"
+
+
 ### Twig Extension
 
 Using the twig function, you must have [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) installed
