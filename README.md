@@ -112,8 +112,10 @@ The auto completion uses the library [jQuery UI Autocomplete](https://jqueryui.c
 You must have [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) installed
 
     twig:
+        paths:
+            "%kernel.root_dir%/../vendor/coosos/tag-bundle/Resources/views": CoososTag
         form_themes:
-            - "CoososTagBundle:Form:fields.html.twig"
+            - "@CoososTag/Form/fields.html.twig"
 
 
 ### Twig Extension
