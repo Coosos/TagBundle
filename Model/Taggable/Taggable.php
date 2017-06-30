@@ -6,7 +6,7 @@ use Coosos\TagBundle\Entity\Tag;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
-trait TaggableTrait
+trait Taggable
 {
     /**
      * @var ArrayCollection

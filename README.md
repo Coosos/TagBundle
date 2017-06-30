@@ -51,6 +51,18 @@ Use this command to insert tag entity in your database
     
 ## Usage
 
+### Tags fields in entity
+
+    namespace AppBundle\Entity;
+    
+    use Coosos\TagBundle as Coosos;
+    
+    class Actuality {
+    
+        use Coosos\Model\Taggable;
+    
+    }
+
 ### Form type
 
 To create a field for tags, you must use a field type provided by the bundle
