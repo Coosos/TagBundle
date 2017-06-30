@@ -55,11 +55,11 @@ Use this command to insert tag entity in your database
 
     namespace AppBundle\Entity;
     
-    use Coosos\TagBundle as Coosos;
+    use Coosos\TagBundle\Model\Taggable\TaggableTrait;
     
     class Actuality {
     
-        use Coosos\Model\Taggable;
+        use TaggableTrait;
     
     }
 
