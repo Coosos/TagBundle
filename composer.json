@@ -20,7 +20,7 @@
         "sensio/framework-extra-bundle": "^3.0"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Cossos\\TagBundle\\" : ""
         },
         "exclude-from-classmap": [
@@ -29,5 +29,6 @@
     },
     "support": {
         "docs": "https://github.com/Coosos/TagBundle"
-    }
+    },
+    "target-dir": "Coosos/TagBundle"
 }
