@@ -1,5 +1,5 @@
 {
-    "name": "Coosos/TagBundle",
+    "name": "coosos/tag-bundle",
     "description": "Symfony TagBundle",
     "type": "symfony-bundle",
     "homepage": "https://github.com/Coosos",
