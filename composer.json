@@ -24,5 +24,6 @@
     },
     "support": {
         "docs": "https://github.com/Coosos/TagBundle"
-    }
+    },
+    "target-dir": "Coosos/TagBundle"
 }
