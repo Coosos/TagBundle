@@ -2,6 +2,7 @@
     "name": "coosos/tag-bundle",
     "description": "Symfony TagBundle",
     "type": "symfony-bundle",
+    "keywords": ["Symfony", "Tag", "Form", "Editor", "Entity"],
     "homepage": "https://github.com/Coosos",
     "license": "MIT",
     "authors": [
