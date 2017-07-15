@@ -9,8 +9,8 @@ _TagBundle is a bundle created from the
 
 * Symfony 3.0 and greater
 * PHP 7.0 and greater
-* [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) (require for twig extension)
-* [jQuery UI Autocomplete](https://jqueryui.com/autocomplete/) (require for auto completion)
+* [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) (optional)
+* [jQuery UI Autocomplete](https://jqueryui.com/autocomplete/) (optional)
 
 ## Installation
 
@@ -115,23 +115,25 @@ To create a field for tags, you must use a field type provided by the bundle
         "coosos_tag_category"       => "House"
     ]);
 
+### Routing
+
+You must include the route to the bundle controller
+
+    # app/config/routing.yml
+    
+    tag:
+        resource: "@CoososTagBundle/Controller/"
+        type: annotation
+
+### Form theme
+
+You must have [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) included in your project
+
+    twig:
+        form_themes:
+            - "CoososTagBundle:Form:fields.html.twig"
+
 ##### Auto complete
 
 The auto completion uses the library [jQuery UI Autocomplete](https://jqueryui.com/autocomplete/)
 
-### TagsType - Form custom template
-
-You must have [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) installed
-
-    twig:
-        paths:
-            "%kernel.root_dir%/../vendor/coosos/tag-bundle/Resources/views": CoososTag
-        form_themes:
-            - "@CoososTag/Form/fields.html.twig"
-
-
-### Twig Extension
-
-Using the twig function, you must have [jQuery tagEditor](https://github.com/Pixabay/jQuery-tagEditor) installed
-
-    {{ form_coosos_tag(form.tags) }}
