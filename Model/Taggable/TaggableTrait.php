@@ -36,7 +36,7 @@ trait TaggableTrait
     {
         if (!$this->tags) { $this->tags = new ArrayCollection($this->tags); }
 
-        $this->tags->remove($tag);
+        $this->tags->removeElement($tag);
 
         return $this;
     }
