@@ -1,32 +1,42 @@
 {
-    "name": "coosos/tag-bundle",
-    "description": "Symfony TagBundle",
-    "type": "symfony-bundle",
-    "keywords": ["Symfony", "Tag", "Form", "Editor", "Entity"],
-    "homepage": "https://github.com/Coosos",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Remy Lescallier",
-            "email": "lescallier1@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=7.0",
-        "symfony/symfony":  "^3.0",
-        "doctrine/orm":     "^2.5",
-        "doctrine/doctrine-bundle": "^1.6",
-        "sensio/framework-extra-bundle": ">=3.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit":  "^6.2"
-    },
-    "autoload": {
-        "psr-0": { "Coosos\\TagBundle\\" : "" }
-    },
-    "support": {
-        "docs": "https://github.com/Coosos/TagBundle"
-    },
-    "target-dir": "Coosos/TagBundle"
+  "name": "coosos/tag-bundle",
+  "description": "Symfony TagBundle",
+  "type": "symfony-bundle",
+  "keywords": [
+    "Symfony",
+    "Tag",
+    "Form",
+    "Editor",
+    "Entity"
+  ],
+  "homepage": "https://github.com/Coosos",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Remy Lescallier",
+      "email": "lescallier1@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.0",
+    "symfony/framework-bundle": "^3.0",
+    "doctrine/orm": "^2.5",
+    "doctrine/doctrine-bundle": "^1.6",
+    "sensio/framework-extra-bundle": ">=3.0",
+    "symfony/form": "^4.0",
+    "twig/extensions": "^1.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "Coosos\\TagBundle\\": ""
+    }
+  },
+  "support": {
+    "docs": "https://github.com/Coosos/TagBundle"
+  },
+  "target-dir": "Coosos/TagBundle"
 }
