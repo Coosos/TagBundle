@@ -14,10 +14,9 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.0",
-        "symfony/symfony":  "^3.0",
-        "doctrine/orm":     "^2.5",
-        "doctrine/doctrine-bundle": "^1.6",
-        "sensio/framework-extra-bundle": "^3.0"
+        "symfony/symfony":  "^3.0|^4.0",
+        "symfony/orm-pack": "^1.0",
+        "sensio/framework-extra-bundle": ">=3.0"
     },
     "require-dev": {
         "phpunit/phpunit":  "^6.2"
