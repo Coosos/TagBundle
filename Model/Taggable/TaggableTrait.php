@@ -16,6 +16,19 @@ trait TaggableTrait
     protected $tags;
 
     /**
+     * Set tags
+     *
+     * @param ArrayCollection $tags
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+
+        return $this;
+    }
+
+    /**
      * @param Tag $tag
      * @return $this
      */
